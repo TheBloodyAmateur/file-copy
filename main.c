@@ -3,7 +3,7 @@
     Class: 5AHEL
     Program: file-copy
     Date: 21.10.2020
-    Github rep.:
+    Github rep.: https://github.com/TheBloodyAmateur/file-copy/tree/master
 */
 #include <stdio.h>
 #include <stdlib.h>
