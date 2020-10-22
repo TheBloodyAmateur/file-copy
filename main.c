@@ -21,11 +21,18 @@ int main()
 
     printf("Choose the first file: ")
 
+    /*
+    The file descriptors are defined.
+    These are used to define which file should be used
+    and what should be done with it
+    */
     fd[0] = open("text.txt", O_RDWR);
     fd[1] = open("text2.txt", O_RDWR);
 
+    //The content of the "text.txt" file is stored in buff.
     read(fd[0],buff,sizeof(buff));
 
+    //This loop is used to only write the content in buff that is not NULL.
     for(int i=0; i < sizeof(buff);i++)
     {
         if(buff[i]!=NULL)
@@ -34,7 +41,9 @@ int main()
         }
     }
 
+    //The content of buff is written in the file "text2.txt".
     write(fd[1],buff,lengthArray);
+    //File descriptors are closed.
     close(fd);
 
     return 0;
