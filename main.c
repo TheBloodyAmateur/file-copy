@@ -19,8 +19,6 @@ int main()
     int fd[2];
     int lengthArray = 0;
 
-    printf("Choose the first file: ")
-
     /*
     The file descriptors are defined.
     These are used to define which file should be used
